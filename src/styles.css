@@ -25,14 +25,13 @@ h1 {
   text-align: center;
   padding-top: 10px;
 }
-h2 {
-  font-size: 18px;
-}
+h2,
 h3 {
-  font-size: 16px;
-}
-h4 {
   font-size: 14px;
+}
+
+h4 {
+  font-size: 12px;
   padding-top: 5px;
   text-align: center;
 }
@@ -62,6 +61,10 @@ p {
   text-align: center;
   margin-top: 20px;
 }
+.highLowTemp,
+.feelsLikeTemp {
+  font-size: 16px;
+}
 .weatherDetails {
   text-align: center;
   margin-top: 25px;
@@ -77,6 +80,7 @@ p {
 
 .measureTemp {
   transition: all 200ms ease-in-out;
+  font-size: 16px;
 }
 .measureTemp:hover {
   opacity: 50%;
@@ -104,12 +108,18 @@ p {
   text-align: center;
   max-width: 700px;
 }
+#today {
+  font-size: 14px;
+}
+
 #todayIcon {
   margin-left: 25px;
 }
 #current-temp {
   font-size: 65px;
 }
+
 #weather-description {
   text-transform: capitalize;
+  font-size: 18px;
 }
