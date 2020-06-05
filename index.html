@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather</title>
+    <meta charset="UTF-8" />
+    <link href="src/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div class="weatherApp">
+      <form id="city-form">
+        <div class="row">
+          <div class="col-1.5" id="current-location">
+            <input type="button" value="◎" class="btn-secondary form-control" />
+          </div>
+
+          <div class="col-8">
+            <input
+              type="text"
+              placeholder="Search City"
+              class="form-control border-0"
+              autofocus="on"
+              autocomplete="off"
+              id="city-input"
+            />
+          </div>
+
+          <div class="col-2.5">
+            <input
+              type="submit"
+              value="Search"
+              class="btn-secondary form-control"
+            />
+          </div>
+        </div>
+      </form>
+
+      <h1></h1>
+      <h4 id="today"></h4>
+      <div class="containerToday">
+        <div class="row">
+          <div class="col-3">
+            <img
+              src="images/Sun.png"
+              alt="Sunny"
+              width="120px"
+              id="todayIcon"
+            />
+          </div>
+          <div class="col-4 currentWeather">
+            <h2>
+              <span id="current-temp"></span>
+
+              <a href="#" class="measureTemp" id="celsius">°C</a>
+
+              <a href="#" class="measureTemp" id="fahrenheit">°F</a>
+            </h2>
+          </div>
+          <div class="col-5 weatherDetails">
+            <h3>
+              High <span id="temp-high"></span>° / Low
+              <span id="temp-low"></span>°
+            </h3>
+            <h3>Feels like <span id="feels-like"></span>°</h3>
+            <h2><span id="weather-description"></span></h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="containerForecast">
+        <div class="row forecast">
+          <div class="col-5">
+            <h6>Sunday</h6>
+          </div>
+          <div class="col-4">
+            <img src="images/Snow.png" alt="Snow" width="50px" />
+          </div>
+          <div class="col-3">
+            <p>2° | <small>-3°</small></p>
+          </div>
+        </div>
+        <div class="row forecast">
+          <div class="col-5">
+            <h6>Monday</h6>
+          </div>
+          <div class="col-4">
+            <img src="images/Rain.png" alt="Rain" width="50px" />
+          </div>
+          <div class="col-3">
+            <p>8° | <small>4°</small></p>
+          </div>
+        </div>
+        <div class="row forecast">
+          <div class="col-5">
+            <h6>Tuesday</h6>
+          </div>
+          <div class="col-4">
+            <img src="images/Sun.png" alt="Sun" width="50px" />
+          </div>
+          <div class="col-3">
+            <p>18° | <small>9°</small></p>
+          </div>
+        </div>
+        <div class="row forecast">
+          <div class="col-5">
+            <h6>Wednesday</h6>
+          </div>
+          <div class="col-4">
+            <img src="images/SunCloud.png" alt="Partly Cloudy" width="50px" />
+          </div>
+          <div class="col-3">
+            <p>12° | <small>8°</small></p>
+          </div>
+        </div>
+        <div class="row forecast">
+          <div class="col-5">
+            <h6>Thursday</h6>
+          </div>
+          <div class="col-4">
+            <img src="images/Storm.png" alt="Storm" width="50px" />
+          </div>
+          <div class="col-3">
+            <p>16° | <small>10°</small></p>
+          </div>
+        </div>
+      </div>
+
+      <script src="src/index.js"></script>
+    </div>
+    <div class="footer">
+      Icons made by
+      <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
+        >Freepik</a
+      >. Coded by
+      <a href="https://www.linkedin.com/in/freya-pearse-0b6b10192/"
+        >Freya Pearse</a
+      >
+    </div>
+  </body>
+</html>
