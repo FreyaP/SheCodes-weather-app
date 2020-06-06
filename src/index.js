@@ -61,7 +61,6 @@ function getFahrenheit(event) {
 let followFahrenheit = document.querySelector("#fahrenheit");
 followFahrenheit.addEventListener("click", getFahrenheit);
 
-//Homework - search city and current location weather
 function displayWeather(response) {
   document.querySelector("h1").innerHTML = `${response.data.name}`;
 
