@@ -62,7 +62,8 @@ p {
   margin-top: 20px;
 }
 .highLowTemp,
-.feelsLikeTemp {
+.feelsLikeTemp,
+.humidity {
   font-size: 16px;
 }
 .weatherDetails {

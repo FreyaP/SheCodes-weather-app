@@ -87,6 +87,10 @@ function displayWeather(response) {
   let feelsLike = response.data.main.feels_like;
   let feelsLikeTemp = document.querySelector("#feels-like");
   feelsLikeTemp.innerHTML = `${Math.round(feelsLike)}`;
+
+  document.querySelector(
+    "#humidity-value"
+  ).innerHTML = `${response.data.main.humidity}`;
 }
 
 function findLocation(event) {
