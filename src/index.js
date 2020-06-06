@@ -63,30 +63,27 @@ followFahrenheit.addEventListener("click", getFahrenheit);
 
 //Homework - search city and current location weather
 function displayWeather(response) {
-  console.log(response);
-  let cityName = response.data.name;
-  let h1 = document.querySelector("h1");
-  h1.innerHTML = `${cityName}`;
+  document.querySelector("h1").innerHTML = `${response.data.name}`;
 
-  let cityTemp = response.data.main.temp;
-  let currentTemp = document.querySelector("#current-temp");
-  currentTemp.innerHTML = `${Math.round(cityTemp)}`;
+  document.querySelector("#current-temp").innerHTML = `${Math.round(
+    response.data.main.temp
+  )}`;
 
-  let weatherDecription = response.data.weather[0].description;
-  let description = document.querySelector("#weather-description");
-  description.innerHTML = `${weatherDecription}`;
+  document.querySelector(
+    "#weather-description"
+  ).innerHTML = `${response.data.weather[0].description}`;
 
-  let maxTemp = response.data.main.temp_max;
-  let highTemp = document.querySelector("#temp-high");
-  highTemp.innerHTML = `${Math.round(maxTemp)}`;
+  document.querySelector("#temp-high").innerHTML = `${Math.round(
+    response.data.main.temp_max
+  )}`;
 
-  let minTemp = response.data.main.temp_min;
-  let lowTemp = document.querySelector("#temp-low");
-  lowTemp.innerHTML = `${Math.round(minTemp)}`;
+  document.querySelector("#temp-low").innerHTML = `${Math.round(
+    response.data.main.temp_min
+  )}`;
 
-  let feelsLike = response.data.main.feels_like;
-  let feelsLikeTemp = document.querySelector("#feels-like");
-  feelsLikeTemp.innerHTML = `${Math.round(feelsLike)}`;
+  document.querySelector("#feels-like").innerHTML = `${Math.round(
+    response.data.main.feels_like
+  )}`;
 
   document.querySelector(
     "#humidity-value"
