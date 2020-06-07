@@ -24,6 +24,7 @@ h1 {
   font-size: 55px;
   text-align: center;
   padding-top: 10px;
+  margin-bottom: 0;
 }
 h2,
 h3 {
@@ -32,7 +33,7 @@ h3 {
 
 h4 {
   font-size: 12px;
-  padding-top: 5px;
+
   text-align: center;
 }
 p {
@@ -45,7 +46,7 @@ p {
   margin: 15px;
   padding: 6px;
   width: 100%;
-  max-width: 700px;
+  max-width: 550px;
   border: solid #f6efeb 1px;
   border-radius: 20px;
 }
@@ -73,7 +74,7 @@ p {
 }
 .weatherDetails {
   margin-top: 25px;
-  padding-left: 50px;
+  padding-left: 35px;
 }
 
 /*
@@ -114,7 +115,7 @@ p {
 .footer {
   font-size: 10px;
   text-align: center;
-  max-width: 700px;
+  max-width: 500px;
 }
 #today {
   font-size: 14px;
