@@ -57,6 +57,10 @@ p {
   padding-bottom: 15px;
   margin-top: 25px;
 }
+.containerToday img {
+  max-width: 100px;
+  padding-top: 20px;
+}
 .currentWeather {
   text-align: center;
   margin-top: 20px;
@@ -64,11 +68,12 @@ p {
 .highLowTemp,
 .feelsLikeTemp,
 .humidity {
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: lighter;
 }
 .weatherDetails {
-  text-align: center;
   margin-top: 25px;
+  padding-left: 50px;
 }
 
 /*
