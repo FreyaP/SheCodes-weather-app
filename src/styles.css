@@ -63,7 +63,7 @@ p {
 }
 .currentWeather {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 28px;
 }
 .highLowTemp,
 .feelsLikeTemp,
@@ -87,6 +87,8 @@ p {
 .measureTemp {
   transition: all 200ms ease-in-out;
   font-size: 16px;
+  position: relative;
+  top: -32px;
 }
 .measureTemp:hover {
   opacity: 50%;
