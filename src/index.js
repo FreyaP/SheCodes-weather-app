@@ -47,7 +47,9 @@ formatDate();
 function getCelsius(event) {
   event.preventDefault();
   let temp = document.querySelector("#current-temp");
-  temp.innerHTML = `30`;
+  temp.innerHTML = `${Math.round(celsiustemp)}`;
+  followFahrenheit.classList.remove("hidden");
+  followCelsius.classList.add("hidden");
 }
 
 let followCelsius = document.querySelector("#celsius");
@@ -56,16 +58,22 @@ followCelsius.addEventListener("click", getCelsius);
 function getFahrenheit(event) {
   event.preventDefault();
   let temp = document.querySelector("#current-temp");
-  temp.innerHTML = `86`;
+  temp.innerHTML = `${Math.round((celsiustemp * 9) / 5 + 32)}`;
+  followFahrenheit.classList.add("hidden");
+  followCelsius.classList.remove("hidden");
 }
 let followFahrenheit = document.querySelector("#fahrenheit");
 followFahrenheit.addEventListener("click", getFahrenheit);
 
+celsiustemp = null;
+
 function displayWeather(response) {
   document.querySelector("h1").innerHTML = `${response.data.name}`;
 
+  celsiustemp = response.data.main.temp;
+
   document.querySelector("#current-temp").innerHTML = `${Math.round(
-    response.data.main.temp
+    celsiustemp
   )}`;
 
   document.querySelector(

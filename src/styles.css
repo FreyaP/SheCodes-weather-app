@@ -66,6 +66,7 @@ p {
   text-align: center;
   margin-top: 28px;
 }
+
 .highLowTemp,
 .feelsLikeTemp,
 .humidity {
@@ -95,6 +96,15 @@ p {
   opacity: 50%;
   cursor: pointer;
 }
+.currentWeather .hidden {
+  color: #f6efeb;
+}
+.currentWeather .hidden:hover {
+  cursor: default;
+  text-decoration: none;
+  opacity: 100%;
+}
+
 .containerForecast .row {
   margin: 15px;
 }
