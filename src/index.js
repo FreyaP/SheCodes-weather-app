@@ -87,6 +87,15 @@ function displayWeather(response) {
   document.querySelector(
     "#humidity-value"
   ).innerHTML = `${response.data.main.humidity}`;
+
+  let weatherIcon = document.querySelector("#todayIcon");
+  weatherIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  document
+    .querySelector("#todayIcon")
+    .setAttribute("alt", `${response.data.weather[0].description}`);
 }
 
 function findLocation(event) {
