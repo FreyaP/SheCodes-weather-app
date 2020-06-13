@@ -116,7 +116,6 @@ function formatDay(timestamp) {
 }
 
 function displayForecast(response) {
-  console.log(response);
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = null;
   let forecast = null;
