@@ -83,6 +83,10 @@ function displayWeather(response) {
     "#humidity-value"
   ).innerHTML = `${response.data.main.humidity}`;
 
+  document.querySelector("#wind").innerHTML = `${Math.round(
+    response.data.wind.speed
+  )}`;
+
   let weatherIcon = document.querySelector("#todayIcon");
   weatherIcon.setAttribute(
     "src",
@@ -112,6 +116,7 @@ function formatDay(timestamp) {
 }
 
 function displayForecast(response) {
+  console.log(response);
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = null;
   let forecast = null;
