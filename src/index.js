@@ -1,5 +1,5 @@
-function formatDate() {
-  let now = new Date();
+function formatDate(timestamp) {
+  let now = new Date(timestamp);
 
   let date = now.getDate();
   let days = ["Sun.", "Mon.", "Tue.", "Wed.", "Thu.", "Fri.", "Sat."];
@@ -31,10 +31,9 @@ function formatDate() {
   }
   let formatMinutes = minutesDisplay();
 
-  let today = document.querySelector("#today");
-  today.innerHTML = `${day} ${date} ${month}, ${hour}:${formatMinutes}`;
+  let today = `${day} ${date} ${month}, ${hour}:${formatMinutes}`;
+  return `${today}`;
 }
-formatDate();
 
 function getCelsius(event) {
   event.preventDefault();
@@ -63,6 +62,10 @@ function displayWeather(response) {
   celsiustemp = response.data.main.temp;
 
   document.querySelector("h1").innerHTML = `${response.data.name}`;
+
+  document.querySelector("#today").innerHTML = `${formatDate(
+    response.data.dt * 1000
+  )}`;
 
   document.querySelector("#current-temp").innerHTML = `${Math.round(
     response.data.main.temp
