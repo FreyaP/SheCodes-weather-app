@@ -139,8 +139,12 @@ function displayForecast(response) {
 function searchCity(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
-  axios.get(apiUrl).then(displayWeather);
+  axios.get(apiUrl).then(displayWeather, notFound);
 }
+function notFound() {
+  alert(`Sorry, that city cannot be found. Please try again.`);
+}
+
 let apiKey = `8c8f09ab6406d1fc43401acc75ad7253`;
 
 let submitCity = document.querySelector("#city-form");
